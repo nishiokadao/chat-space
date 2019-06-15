@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-detabasebdesing
+**DB設計**
 
 |Column|Type|Options|
 |------|----|-------|
