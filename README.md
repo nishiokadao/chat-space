@@ -23,17 +23,14 @@ Things you may want to cover:
 
 * ...
 
-members
+detabasebdesing
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|neme|string|index:ture,null: false, unique: true|
+|mail|string|null: false,|
 
  Association
-- belongs_to :group
-- belongs_to :user
-
-has_many:grop,through:members
-has_many:messages
-has_many:members
+- has_many:grop,through:members
+- has_many:messages
+- has_many:members
