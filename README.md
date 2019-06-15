@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-users
+members
 
 |Column|Type|Options|
 |------|----|-------|
