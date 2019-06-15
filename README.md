@@ -27,7 +27,6 @@ detabasebdesing
 
 |Column|Type|Options|
 |------|----|-------|
-
 |neme|string|index:ture,null: false, unique: true|
 |mail|string|null: false,|
 
