@@ -30,7 +30,7 @@ users table
 |Column|Type|Options|
 |------|----|-------|
 |neme|string|index:ture,null: false, unique: true|
-|mail|string|null: false,|
+|mail|string|null: false|
 
  Association
 - has_many:grop,through:members
