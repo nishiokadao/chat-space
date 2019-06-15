@@ -29,7 +29,7 @@ users table
 
 |Column|Type|Options|
 |------|----|-------|
-|neme|string|index:ture,null: false, unique: true|
+|name|string|index:ture,null: false, unique: true|
 |mail|string|null: false|
 
  Association
