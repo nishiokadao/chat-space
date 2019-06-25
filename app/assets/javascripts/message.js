@@ -1,5 +1,5 @@
 function buildHTML(message){
-    //var image = message.image? ${message.image} : ""
+    var image = message.image? ${message.image} : ""
   
     var html =
      `<div class="message" data-message-id=${message.id}>
@@ -97,7 +97,7 @@ $("#new_message").on('submit', function(e) {
     var html = buildHTML(data);
 
     $('.messages').append(html);
-    $('.form__message').val('');
+    $('.form__message').input[type=“reset”];
     $('.form__submit').prop('disabled', false);
     scroll()
 
