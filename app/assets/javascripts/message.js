@@ -106,5 +106,6 @@ $("#new_message").on('submit', function(e) {
   alert('error')
   $('.form__submit').prop('disabled', false);
 })
-
+    return false;
 })
+
