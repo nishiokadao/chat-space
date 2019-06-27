@@ -62,6 +62,7 @@ $.ajax({
                                <p class="lower-message__content">
                                    ${ message.content }
                                </p>
+                               <img src="${image}">
                            </div>
                        </div>`;
         return html;
