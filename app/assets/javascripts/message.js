@@ -49,6 +49,7 @@ $.ajax({
 (function() {
 
   function buildHTML(message){
+    var image = message.image.url? $(message.image.url) :""
     var html = `<div class="message">
                            <div class="upper-message">
                                <div class="upper-message__user-name">
