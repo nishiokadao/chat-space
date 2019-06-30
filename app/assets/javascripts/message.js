@@ -35,19 +35,17 @@ $(function() {
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
-    url: url,
-    type: "POST",
-    data: formData,
-    dataType: 'json',
-    processData: false,
-    contentType: false
+     url: url,
+     type: "POST",
+     data: formData,
+     dataType: 'json',
+     processData: false,
+     contentType: false
     })
     .done(function(data){
-      console.log("done")
       var html = buildHTML(data);
 
       $('.messages').append(html);
-      // $('.form__message').input[type=“reset”];
       $('.form__submit').prop('disabled', false);
       scroll()
 
