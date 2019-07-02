@@ -21,33 +21,6 @@
             Edit
     .messages
       = render @messages
-      -# .message
-      -#   .upper-message
-      -#     .upper-message__user-name
-      -#       sss
-      -#     .upper-message__date
-      -#       2019/06/20
-      -#   .lower-meesage
-      -#     .lower-message__content
-      -#       aaa
-      -# .message
-      -#   .upper-message
-      -#     .upper-message__user-name
-      -#       qqq
-      -#     .upper-message__date
-      -#       2019/06/20
-      -#   .lower-meesage
-      -#     .lower-message__content
-      -#       eeee
-      -# .message
-      -#   .upper-message
-      -#     .upper-message__user-name
-      -#       mmm
-      -#     .upper-message__date
-      -#       2019/06/20
-      -#   .lower-meesage
-      -#     .lower-message__content
-      -#       vv
     .form
       = form_for [@group, @message], id: "new_message" do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'

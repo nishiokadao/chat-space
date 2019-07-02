@@ -61,9 +61,6 @@ $(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var last_message_id = $('.message:last').data("message_id"); 
       const result = $('.left-header__title').data('group_id');
-      
-      
-      // var auto_url = "/groups/" + group_id + "/api/messages"
 
       $.ajax({ 
         url: `/groups/${result}/api/messages`, 
