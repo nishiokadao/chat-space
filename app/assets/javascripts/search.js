@@ -38,7 +38,8 @@ $(function() {
       $('input[name="group[user_ids][]"]').each(function(i,user) {
         users.push($(user).val());
       });
-        console.log(users)
+        console.log(input.length)
+      if (input.length != 0) {
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -60,7 +61,8 @@ $(function() {
         })
       .fail(function() {
         alert('ユーザー検索に失敗しました');
-      })
+      }) 
+      }
     });
 
     $(function(){
