@@ -34,11 +34,16 @@ $(function() {
   $(function(){
     $("#user-search-field").on("keyup", function() {
       var input = $("#user-search-field").val();
-
+       var users = [];
+      $('input[name="group[user_ids][]"]').each(function(i,user) {
+        users.push($(user).val());
+      });
+        console.log(users)
       $.ajax({
         type: 'GET',
         url: '/users',
-        data: { keyword: input },
+        data: { keyword: input,
+        selected_users: users },
         dataType: 'json'
       })
 
