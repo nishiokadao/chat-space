@@ -34,34 +34,33 @@ $(function() {
   $(function(){
     $("#user-search-field").on("keyup", function() {
       var input = $("#user-search-field").val();
-       var users = [];
+      var users = [];
       $('input[name="group[user_ids][]"]').each(function(i,user) {
         users.push($(user).val());
       });
-        console.log(input.length)
-      if (input.length != 0) {
-      $.ajax({
-        type: 'GET',
-        url: '/users',
-        data: { keyword: input,
-        selected_users: users },
-        dataType: 'json'
-      })
-
-      .done(function(users) {
-        $("#user-search-result").empty();
-          if (users.length !== 0) {
-            users.forEach(function(user){
-            appendUsers(user);
-            });
-          }
-          else {
-            appendNoUsers("一致するユーザーはいません");
-          }
+        // console.log(input.length)
+      $("#user-search-result").empty();
+      if (input.length !== 0) {
+        $.ajax({
+          type: 'GET',
+          url: '/users',
+          data: { keyword: input,
+          selected_users: users },
+          dataType: 'json'
         })
-      .fail(function() {
-        alert('ユーザー検索に失敗しました');
-      }) 
+        .done(function(users) {
+            if (users.length !== 0) {
+              users.forEach(function(user){
+              appendUsers(user);
+              });
+            }
+            else {
+              appendNoUsers("一致するユーザーはいません");
+            }
+          })
+        .fail(function() {
+          alert('ユーザー検索に失敗しました');
+        }) 
       }
     });
 
